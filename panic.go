@@ -4,6 +4,8 @@ import "fmt"
 
 func endApp() {
 	fmt.Println("app end")
+	message := recover()
+	fmt.Println("terjadi panic", message)
 }
 
 func runApp(error bool) {
