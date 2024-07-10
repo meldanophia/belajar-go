@@ -17,4 +17,13 @@ func main() {
 	// invalid operation: resultString (variable of type string) is not an interface
 	// resultInt := resultString.(int) // panic
 	// fmt.Println(resultInt)
+
+	switch value := result.(type) {
+	case string:
+		fmt.Println("String", value)
+	case int:
+		fmt.Println("Int", value)
+	default:
+		fmt.Println("Unknown", value)
+	}
 }
