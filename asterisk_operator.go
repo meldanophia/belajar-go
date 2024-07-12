@@ -12,12 +12,12 @@ func main() {
 
 	address2.City = "Bandung"
 
-	fmt.Println(address1) // {Bandung Jawa Barat Indonesia}
-	fmt.Println(address2) // &{Bandung Jawa Barat Indonesia}
+	fmt.Println(address1) // {Subang Jawa Barat Indonesia}
+	fmt.Println(address2) // {Bandung Jawa Barat Indonesia}
 
-	address2 = &Address{"Jakarta", "DKI Jakarta", "Indonesia"}
+	*address2 = Address{"Jakarta", "DKI Jakarta", "Indonesia"}
 
-	fmt.Println(address1) // {Bandung Jawa Barat Indonesia}
+	fmt.Println(address1) // {Jakarta DKI Jakarta Indonesia}
 	fmt.Println(address2) // &{Jakarta DKI Jakarta Indonesia}
 
 }
